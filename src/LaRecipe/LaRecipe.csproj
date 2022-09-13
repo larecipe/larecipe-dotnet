@@ -8,19 +8,37 @@
         <Title>LaRecipe</Title>
         <Description>Write gorgeous documentation for your products using Markdown inside your dotnet apps.</Description>
         <Copyright>Copyright (c) LaRecipe 2022</Copyright>
-        <PackageProjectUrl>http://larecipe.saleem.dev/</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/larecipe/larecipe-dotnet/blob/main/LICENSE</PackageLicenseUrl>
+        <PackageProjectUrl>https://larecipe.saleem.dev/</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>icon.png</PackageIcon>
         <RepositoryUrl>https://github.com/larecipe/larecipe-dotnet</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>docs, documentation, larecipe</PackageTags>
+        <PackageVersion>0.0.1-alpha</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
       <None Update="icon.png">
         <Pack>True</Pack>
-        <PackagePath></PackagePath>
       </None>
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Markdig" Version="0.30.3" />
+      <PackageReference Include="Microsoft.AspNet.FileProviders" Version="1.0.0-beta4" />
+      <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+      <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="6.0.8" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="index.html" />
+        <EmbeddedResource Include="app.css" />
+    </ItemGroup>
 </Project>
