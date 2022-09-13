@@ -4,6 +4,17 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>LaRecipe.Application</Title>
+        <Description>Core logic package for LaRecipe.</Description>
+        <Copyright>Copyright (c) LaRecipe 2022</Copyright>
+        <PackageProjectUrl>https://larecipe.saleem.dev/</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageIcon>icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/larecipe/larecipe-dotnet</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>docs, documentation, larecipe</PackageTags>
+        <PackageVersion>0.0.6-alpha</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,6 +24,13 @@
 
     <ItemGroup>
       <ProjectReference Include="..\LaRecipe.Application\LaRecipe.Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="icon.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>

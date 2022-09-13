@@ -4,6 +4,17 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>LaRecipe.Application</Title>
+        <Description>UI Middleware for main LaRecipe package.</Description>
+        <Copyright>Copyright (c) LaRecipe 2022</Copyright>
+        <PackageProjectUrl>https://larecipe.saleem.dev/</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageIcon>icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/larecipe/larecipe-dotnet</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>docs, documentation, larecipe</PackageTags>
+        <PackageVersion>0.0.6-alpha</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -15,5 +26,12 @@
         <EmbeddedResource Include="../LaRecipe\Web\index.html" />
         <EmbeddedResource Include="../LaRecipe\Web\app.css" />
         <EmbeddedResource Include="../LaRecipe\Web\app.js" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="icon.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
     </ItemGroup>
 </Project>
