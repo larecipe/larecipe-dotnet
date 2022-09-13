@@ -3,7 +3,7 @@
 </h6>
 
 <h2 align="center">
-    LaRecipe | .Net ❤️
+    LaRecipe (very early stage) | .Net ❤️
 </h2>
 
 
