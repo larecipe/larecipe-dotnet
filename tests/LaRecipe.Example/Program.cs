@@ -10,6 +10,7 @@ builder.Services
 var app = builder.Build();
 
 app.UseHttpsRedirection()
+    .UsePathBase("/base")
     .UseLaRecipe()  // <- 
     .UseAuthorization();
 
