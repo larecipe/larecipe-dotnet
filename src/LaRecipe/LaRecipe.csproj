@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>LaRecipe</Title>
+        <Description>Write gorgeous documentation for your products using Markdown inside your dotnet apps.</Description>
+        <Copyright>Copyright (c) LaRecipe 2022</Copyright>
+        <PackageProjectUrl>http://larecipe.saleem.dev/</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/larecipe/larecipe-dotnet/blob/main/LICENSE</PackageLicenseUrl>
+        <PackageIcon>icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/larecipe/larecipe-dotnet</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>docs, documentation, larecipe</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Update="icon.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+
+</Project>
