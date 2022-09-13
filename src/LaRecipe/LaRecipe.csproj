@@ -20,12 +20,12 @@
     <ItemGroup>
       <None Update="icon.png">
         <Pack>True</Pack>
+        <PackagePath></PackagePath>
       </None>
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Markdig" Version="0.30.3" />
-      <PackageReference Include="Microsoft.AspNet.FileProviders" Version="1.0.0-beta4" />
       <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
       <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
       <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />

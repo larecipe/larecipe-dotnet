@@ -1,19 +1,19 @@
 using System.Text;
 using System.Reflection;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
-using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Logging;
 
 namespace LaRecipe;
 
 public class DocumentationMiddleware
 {
-    private const string EmbeddedFileNamespace = "GroceryAffordability.API.Documentation";
+    private const string EmbeddedFileNamespace = "LaRecipe";
     private const string EmbeddedIndexHtmlFile = $"{EmbeddedFileNamespace}.index.html";
 
     private readonly StaticFileMiddleware _staticFileMiddleware;
@@ -75,7 +75,7 @@ public class DocumentationMiddleware
     private IDictionary<string, string> GetIndexArguments() =>
         new Dictionary<string, string>
         {
-            { "%(DocumentTitle)", "Grocery Affordability" },
+            { "%(DocumentTitle)", "LaRecipe" },
             { "%(DocumentContent)", _documentationResolver.Resolve() },
         };
 }
