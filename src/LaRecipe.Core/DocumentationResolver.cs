@@ -1,7 +1,8 @@
 using Markdig;
 using System.Text;
+using LaRecipe.Application.Interfaces;
 
-namespace LaRecipe;
+namespace LaRecipe.Core;
 
 public class DocumentationResolver: IDocumentationResolver
 {

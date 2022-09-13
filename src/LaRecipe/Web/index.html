@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>%(DocumentTitle)</title>
+    <link rel="stylesheet" href="/docs/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      h1,h2,h3,h4,h5,h6,p,a,span,li {
+        font-family: 'Lexend', sans-serif;
+      }
+    </style>
+
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="fixed top-0 left-0 right-0 z-20">
+        <div class="bg-primary text-white h-1"></div>
+
+        <nav class="flex items-center justify-between text-slate-900 dark:text-slate-200 bg-navbar-light dark:bg-navbar-dark shadow h-16 px-6">
+          <div class="flex items-center flex-no-shrink">
+            <a href="/docs" class="flex items-center flex-no-shrink text-slate-700 mr-2">
+              
+              <p class="inline-block font-bold mx-2 text-slate-700 dark:text-slate-400">
+                %(DocumentTitle)
+              </p>
+            </a>
+          </div>
+
+          <div class="block flex items-center">
+            <div class="flex items-center gap-4">
+              <button id="switchTheme" class="text-sky-500 dark:text-sky-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden dark:inline-flex" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+                </svg>
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 dark:hidden"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-sky-400/20"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-sky-500"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-sky-500"></path></svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="documentation">
+        %(DocumentContent)
+      </div>
+
+      <larecipe-back-to-top></larecipe-back-to-top>
+    </div>
+
+    <script src="/docs/app.js"></script>
+
+    <script>
+      window.LaRecipe = new CreateLarecipe()
+    </script>
+    
+    <script>
+      LaRecipe.run()
+
+      document.getElementById('switchTheme').addEventListener('click', function() {
+        let htmlClasses = document.querySelector('html').classList;
+        if(localStorage.theme == 'dark') {
+          htmlClasses.remove('dark');
+          localStorage.removeItem('theme')
+        } else {
+          htmlClasses.add('dark');
+          localStorage.theme = 'dark';
+        }
+      });
+    </script>
+  </body>
+</html>

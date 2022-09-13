@@ -1,19 +1,20 @@
 using System.Text;
 using System.Reflection;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Hosting;
 using System.Text.RegularExpressions;
+using LaRecipe.Application.Interfaces;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.FileProviders;
 
-namespace LaRecipe;
+namespace LaRecipe.Application.Middlewares;
 
 public class DocumentationMiddleware
 {
-    private const string EmbeddedFileNamespace = "LaRecipe";
+    private const string EmbeddedFileNamespace = "LaRecipe.Application";
     private const string EmbeddedIndexHtmlFile = $"{EmbeddedFileNamespace}.index.html";
 
     private readonly StaticFileMiddleware _staticFileMiddleware;
@@ -60,6 +61,7 @@ public class DocumentationMiddleware
         response.StatusCode = 200;
         response.ContentType = "text/html;charset=utf-8";
 
+        var r = Assembly.GetExecutingAssembly();
         using var reader = new StreamReader(GetIndexStream());
         var htmlBuilder = new StringBuilder(await reader.ReadToEndAsync());
         foreach (var entry in GetIndexArguments())
@@ -69,13 +71,13 @@ public class DocumentationMiddleware
         await response.WriteAsync(htmlBuilder.ToString(), Encoding.UTF8);
     }
 
-    private Func<Stream> GetIndexStream { get; } = () => typeof(DocumentationMiddleware).GetTypeInfo().Assembly
+    private Func<Stream> GetIndexStream { get; } = () => Assembly.GetExecutingAssembly()
         .GetManifestResourceStream(EmbeddedIndexHtmlFile)!;
 
     private IDictionary<string, string> GetIndexArguments() =>
         new Dictionary<string, string>
         {
-            { "%(DocumentTitle)", "LaRecipe" },
+            { "%(DocumentTitle)", "Documentation" },
             { "%(DocumentContent)", _documentationResolver.Resolve() },
         };
 }

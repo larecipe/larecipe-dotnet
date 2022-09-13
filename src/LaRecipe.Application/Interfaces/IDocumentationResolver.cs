@@ -1,4 +1,4 @@
-namespace LaRecipe;
+namespace LaRecipe.Application.Interfaces;
 
 public interface IDocumentationResolver
 {
