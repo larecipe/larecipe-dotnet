@@ -30,13 +30,7 @@
 
 ## Getting Started
 
-☝️ Install the package via composer.
-
-    composer require binarytorch/larecipe
-
-✌️ Run the install command.
-
-    php artisan larecipe:install
+TODO..
 
 Visit your app domain with `/docs` endpoint. That's it.
 
