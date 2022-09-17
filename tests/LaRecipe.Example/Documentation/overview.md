@@ -4,11 +4,8 @@ LaRecipe helps you write clean and beautiful documentation using Markdown for yo
 
 ---
 
-- [Overview](#overview)
-- [Features](#features)
-- [Credits](#credits)
+[TOC]
 
-<a name="overview"></a>
 ## Overview
 
 **LaRecipe** is simply  a code-driven package provides an easy way to create beautiful documentation like this for your product or application inside your Laravel app. However, the usage of LaRecipe is not limited to creating documentation only 😏. See an [example](/docs/{{version}}/example-project-tracking).
@@ -17,12 +14,7 @@ LaRecipe helps you write clean and beautiful documentation using Markdown for yo
 echo 'LaRecipe is beautiful';
 ```
 
-![screenshot](https://larecipe.saleem.dev/images/screenshot.png)
-
-<a name="features"></a>
 ## Features
-
-### H3
 
 Inline code is `cool`
 
@@ -31,14 +23,12 @@ Inline code is `cool`
 echo 'LaRecipe is beautiful';
 ```
 
-<larecipe-badge type="primary" circle icon="fa fa-user"></larecipe-badge>
+
+FinalMessageResolver | <larecipe-card><larecipe-badge type="success" circle class="mr-2" icon="fa fa-book">🚀</larecipe-badge> Yay! you saved AED 10 on delivery!<larecipe-progress type="success" :value="100"></larecipe-progress></larecipe-card>
+:- | :-
+0  | 1
 
 
-| # | Name   | Age |
-| : |   :-   |  :  |
-| 1 | Saleem | 24  |
-| 2 | John   | 25  |
-| 3 | Ayman  | 26  |
 
 
 <larecipe-card>
@@ -46,68 +36,7 @@ echo 'LaRecipe is beautiful';
     <larecipe-progress type="success" :value="100"></larecipe-progress>
 </larecipe-card>
 
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa  fa-heart"></larecipe-badge> UI Vue Component
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
 
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa  fa-search"></larecipe-badge> Algolia and Internal Search
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
-
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa fa-comment"></larecipe-badge> Forum Support
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
-
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa fa-paper-plane"></larecipe-badge> SEO Support
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
-
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa fa-bar-chart"></larecipe-badge> Google Analytics
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
-
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa fa-bookmark"></larecipe-badge> Caching
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
-
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa fa-code-fork"></larecipe-badge> Versioning Support
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
-
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa fa-lock"></larecipe-badge> Authentication
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
-
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa fa-address-card"></larecipe-badge> Authorization
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
-
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa  fa-terminal"></larecipe-badge> Artisan Commands
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
-
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa  fa-key"></larecipe-badge> Keyboard Shortcuts
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="100"></larecipe-progress>
-</larecipe-card>
-
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa  fa-user"></larecipe-badge> Responsive UI
-    <larecipe-progress :striped="true" :animated="true" type="success" :value="99"></larecipe-progress>
-</larecipe-card>
-
-
-<a name="credits"></a>
 ## Credits
 
 LaRecipe package uses internally some open-source third-party libraries/packages, many thanks to the web community:

@@ -49,9 +49,15 @@
         </nav>
       </div>
       
-      <div class="documentation">
-        %(DocumentContent)
-      </div>
+        <div>
+            <div class="sidebar" :class="[{'is-hidden': sidebar}]">
+                %(Sidebar)
+            </div>
+            
+            <div id="documentation" class="documentation">
+                %(Content)
+            </div>
+        </div>
 
       <larecipe-back-to-top></larecipe-back-to-top>
     </div>

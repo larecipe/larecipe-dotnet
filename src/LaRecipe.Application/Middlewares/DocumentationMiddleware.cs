@@ -74,10 +74,15 @@ public class DocumentationMiddleware
     private Func<Stream> GetIndexStream { get; } = () => Assembly.GetExecutingAssembly()
         .GetManifestResourceStream(EmbeddedIndexHtmlFile)!;
 
-    private IDictionary<string, string> GetIndexArguments() =>
-        new Dictionary<string, string>
+    private IDictionary<string, string> GetIndexArguments()
+    {
+        var (content, sidebar) = _documentationResolver.Resolve();
+        
+        return new Dictionary<string, string>
         {
             { "%(DocumentTitle)", "Documentation" },
-            { "%(DocumentContent)", _documentationResolver.Resolve() },
+            { "%(Content)",  content},
+            { "%(Sidebar)",  sidebar},
         };
+    }
 }
