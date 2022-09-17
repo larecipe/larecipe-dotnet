@@ -2,6 +2,7 @@ using Markdig;
 using System.Text;
 using LaRecipe.Application.Domain;
 using LaRecipe.Application.Interfaces;
+using LaRecipe.Core.Extensions.TableOfContents;
 
 namespace LaRecipe.Core;
 
