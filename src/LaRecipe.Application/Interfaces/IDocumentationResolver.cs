@@ -4,5 +4,5 @@ namespace LaRecipe.Application.Interfaces;
 
 public interface IDocumentationResolver
 {
-    DocumentationPage Resolve();
+    DocumentationPage Resolve(GetDocumentationQuery getDocumentationQuery);
 }

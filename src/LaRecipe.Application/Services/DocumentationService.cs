@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Text;
+using LaRecipe.Application.Domain;
 using LaRecipe.Application.Extensions;
 using LaRecipe.Application.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -36,7 +37,8 @@ public class DocumentationService: IDocumentationService
 
     private IDictionary<string, string> GetIndexArguments(HttpRequest httpRequest)
     {
-        var (content, sidebar) = _documentationResolver.Resolve();
+        var getDocumentationQuery = new GetDocumentationQuery(httpRequest.Path.ToString().Replace("/docs/", ""));
+        var (content, sidebar) = _documentationResolver.Resolve(getDocumentationQuery);
         
         return new Dictionary<string, string>
         {

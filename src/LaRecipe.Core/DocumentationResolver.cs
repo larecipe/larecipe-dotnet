@@ -8,9 +8,9 @@ namespace LaRecipe.Core;
 
 public class DocumentationResolver: IDocumentationResolver
 {
-    public DocumentationPage Resolve()
+    public DocumentationPage Resolve(GetDocumentationQuery getDocumentationQuery)
     {
-        using var contentStreamReader = new StreamReader(@"Documentation/overview.md");
+        using var contentStreamReader = new StreamReader($@"Documentation/{getDocumentationQuery.Path}.md");
         using var sidebarStreamReader = new StreamReader(@"Documentation/index.md");
         
         var contentStringBuilder = new StringBuilder(contentStreamReader.ReadToEnd());
