@@ -18,7 +18,14 @@ public class DocumentationResolver: IDocumentationResolver
         
         var pipeline = new MarkdownPipelineBuilder()
                 .UseAdvancedExtensions()
-                .UseTableOfContent()
+                .UseTableOfContent(opt =>
+                {
+                    opt.ContainerTag = "aside";
+                    opt.ContainerClass = "table-of-contents-sidebar-wrapper";
+                    opt.TocTag = "aside";
+                    opt.TocClass = "table-of-contents-sidebar table-of-contents";
+                    opt.ulClass = "table-of-contents";
+                })
                 .Build();
         
         var content = Markdown.ToHtml(contentStringBuilder.ToString(), pipeline);

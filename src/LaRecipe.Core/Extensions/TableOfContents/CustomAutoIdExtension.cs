@@ -196,7 +196,10 @@ public sealed class CustomAutoIdExtension : IMarkdownExtension
         }
         finally
         {
-            OnHeadingParsed?.Invoke(new HeadingInfo(headingBlock.Level, attributes.Id!, headingText));
+            if (headingBlock.Level > 1)
+            {
+                OnHeadingParsed?.Invoke(new HeadingInfo(headingBlock.Level, attributes.Id!, headingText));   
+            }
         }
     }
 

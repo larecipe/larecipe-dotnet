@@ -46,7 +46,7 @@ public class HtmlTocRenderer : HtmlObjectRenderer<TocBlock>
                 if (Options.TitleAsConainerHeader)
                     WriteTitle(renderer, obj);
             }
-
+            
             renderer.Write($"<{Options.TocTag}")
                 .WriteAttributes(obj)
                 .Write($">");
@@ -55,6 +55,8 @@ public class HtmlTocRenderer : HtmlObjectRenderer<TocBlock>
         if (Options.ContainerTag is null || !Options.TitleAsConainerHeader)
             WriteTitle(renderer, obj);
 
+        renderer.Write($"<h2>On this page</h2>");
+        
         if (renderer.EnableHtmlForBlock)
         {
             Options.Headings.RenderHtml(renderer, Options);

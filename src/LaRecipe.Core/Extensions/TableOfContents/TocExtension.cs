@@ -35,19 +35,7 @@ public class TocExtension : IMarkdownExtension
         autoIdExtension.OnHeadingParsed -= AutoIdExtension_OnHeadingParsed;
         autoIdExtension.OnHeadingParsed += AutoIdExtension_OnHeadingParsed;
         pipeline.BlockParsers.AddIfNotAlready(new TocBlockParser(Options));
-
-        //clear headings after all rendered, not here
-        //pipeline.DocumentProcessed -= Pipeline_DocumentProcessed;
-        //pipeline.DocumentProcessed += Pipeline_DocumentProcessed;
     }
-
-    //private void Pipeline_DocumentProcessed(MarkdownDocument document)
-    //{
-    //    //if there is no [toc] in markdown document, clear the headings.
-    //    var tocBlocks = document.Where(block => block is TocBlock).ToList();
-    //    if (tocBlocks == null || tocBlocks.Count < 1)
-    //        Options.Headings.Clear();
-    //}
 
     private void AutoIdExtension_OnHeadingParsed(HeadingInfo heading)
         => Options.AddHeading(heading);
