@@ -13,28 +13,79 @@
     
 
 <p align="center">
-<a href="https://github.com/saleem-hadad/larecipe"><img src="https://img.shields.io/packagist/dt/binarytorch/larecipe.svg" alt="License"></a>
+<a href="https://github.com/larecipe/larecipe-dotnet"><img src="https://img.shields.io/packagist/dt/binarytorch/larecipe.svg" alt="License"></a>
 <a title="MadeWithVueJs.com Shield" href="https://madewithvuejs.com/p/larecipe/shield-link"> <img src="https://madewithvuejs.com/storage/repo-shields/1087-shield.svg"/></a>
-<a href="https://github.com/saleem-hadad/larecipe"><img src="https://img.shields.io/github/release/saleem-hadad/larecipe.svg" alt="Release"></a>
-<a href="https://github.com/saleem-hadad/larecipe"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<a href="https://github.com/larecipe/larecipe-dotnet"><img src="https://img.shields.io/github/release/larecipe/larecipe-dotnet.svg" alt="Release"></a>
+<a href="https://github.com/larecipe/larecipe-dotnet"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
  <a href="#sponsors" alt="Sponsors on Open Collective"><img src="https://opencollective.com/larecipe/sponsors/badge.svg" /></a> 
 </p>
 <br/><br/>
 
 # LaRecipe 🍪
 
-**LaRecipe** is simply a code-driven package provides an easy way to create beautiful documentation for your product or application inside your .Net apps.
+**LaRecipe** is simply a code-driven package provides an easy way to create beautiful documentation for your product or application inside your **.Net** apps.
+
+> Note: LaRecipe was originally build to work with Laravel framework and now we're expanding the scope to integrate it with dotnet applications. Check out the Laravel integration version.
 
 ![LaRecipe Screenshot](https://larecipe.saleem.dev/images/screenshot.png#)
 
 
 ## Getting Started
 
-TODO..
+> LaRecipe for dotnet is still in a very early stage (alpha), use it carefully with production.
 
-Visit your app domain with `/docs` endpoint. That's it.
+1. Install the standard Nuget package into your ASP.NET Core application.
 
-#### See [full documentation](https://larecipe.saleem.dev/)
+```bash
+# Package manager
+Install-Package LaRecipe -Version 0.0.12-alpha
+
+# CLI
+dotnet add package LaRecipe --version 0.0.12-alpha
+```
+
+2. Register LaRecipe as a service
+
+> Minimal API
+
+```
+using LaRecipe;
+using LaRecipe.Extensions;
+
+..
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddLaRecipe()
+```
+
+3. Use LaRecipe middleware
+
+> Minimal API
+
+```
+...
+var app = builder.Build();
+app.UseLaRecipe()
+```
+
+This middleware will be used only when the request path starts with `/docs`, this is to insure not having any performance hit for the rest of your application. 
+
+
+4. Add your markdown documentation (manually for now), create a directory in the root of your application called `Documentation` and then add the following required files to start with:
+
+> Check the [provided example](https://github.com/larecipe/larecipe-dotnet/tree/main/tests/LaRecipe.Example/Documentation) for more information
+
+```
+.(root)
+├─ Documentation
+|  │─ index.md
+│  └─ overview.md
+```
+
+
+Finally, run the app and visit `/docs` endpoint. Enjoy documenting.
+
+#### See [full documentation](https://larecipe-dotnet.saleem.dev/)
 
 
 ## Examples
