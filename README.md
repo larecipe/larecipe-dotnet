@@ -82,6 +82,14 @@ This middleware will be used only when the request path starts with `/docs`, thi
 │  └─ overview.md
 ```
 
+5. (Optional) If you're using docker image to build and deploy your application, make sure to include the documentation files in the published image. Add this configuration to your application `xxx.csproj` 
+
+```
+<ItemGroup>
+    <Content Include="Documentation\**\*" CopyToPublishDirectory="Always" />
+</ItemGroup>
+```
+
 
 Finally, run the app and visit `/docs` endpoint. Enjoy documenting.
 
