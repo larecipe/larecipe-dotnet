@@ -25,16 +25,16 @@
 
 **LaRecipe** is simply a code-driven package provides an easy way to create beautiful documentation for your product or application inside your **.Net** apps.
 
-> Note: LaRecipe was originally build to work with Laravel framework and now we're expanding the scope to integrate it with dotnet applications. Check out the Laravel integration version.
+> Note: LaRecipe was originally built to work with Laravel framework and now we're expanding the scope to integrate it with dotnet applications. Check out the Laravel integration version.
 
 ![LaRecipe Screenshot](https://larecipe.saleem.dev/images/screenshot.png#)
 
 
 ## Getting Started
 
-> LaRecipe for dotnet is still in a very early stage (alpha), use it carefully with production.
-
 1. Install the standard Nuget package into your ASP.NET Core application.
+
+> LaRecipe for dotnet is still in a very early stage (alpha), use it carefully with production.
 
 ```bash
 # Package manager
