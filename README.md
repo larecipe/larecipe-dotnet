@@ -91,7 +91,7 @@ if (app.Environment.IsDevelopment())
 
 Finally, run the app and visit `/docs` endpoint. Enjoy documenting.
 
-#### See [full documentation](https://larecipe-dotnet.saleem.dev/)
+#### See [full documentation](https://larecipe.saleem.dev/)
 
 
 ## Examples
