@@ -44,7 +44,9 @@ Install-Package LaRecipe -Version 0.0.12-alpha
 dotnet add package LaRecipe --version 0.0.12-alpha
 ```
 
-2. Register LaRecipe as a service
+2. Register LaRecipe as a service and use the middleware
+
+This middleware will be used only when the request path starts with `/docs`, this is to insure not having any performance hit for the rest of your application. 
 
 > Minimal API
 
@@ -56,22 +58,14 @@ using LaRecipe.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddLaRecipe()
-```
 
-3. Use LaRecipe middleware
-
-> Minimal API
-
-```
 ...
 var app = builder.Build();
 app.UseLaRecipe()
 ```
 
-This middleware will be used only when the request path starts with `/docs`, this is to insure not having any performance hit for the rest of your application. 
 
-
-4. Add your markdown documentation (manually for now), create a directory in the root of your application called `Documentation` and then add the following required files to start with:
+3. Add your markdown documentation (manually for now), create a directory in the root of your application called `Documentation` and then add the following required files to start with:
 
 > Check the [provided example](https://github.com/larecipe/larecipe-dotnet/tree/main/tests/LaRecipe.Example/Documentation) for more information
 
@@ -82,7 +76,7 @@ This middleware will be used only when the request path starts with `/docs`, thi
 │  └─ overview.md
 ```
 
-5. (Optional) If you're using docker image to build and deploy your application, make sure to include the documentation files in the published image. Add this configuration to your application `xxx.csproj` 
+4. (Optional) If you're using docker image to build and deploy your application, make sure to include the documentation files in the published image. Add this configuration to your application `xxx.csproj` 
 
 ```
 <ItemGroup>
