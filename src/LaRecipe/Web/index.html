@@ -34,6 +34,11 @@
                 %(DocumentTitle)
               </p>
             </a>
+
+              <div class="switch">
+                  <input type="checkbox" name="sidebar-switch" id="sidebar-switch" v-model="sidebar" class="switch-checkbox" />
+                  <label class="switch-label" for="sidebar-switch"></label>
+              </div>
           </div>
 
           <div class="block flex items-center">
@@ -50,11 +55,11 @@
       </div>
       
         <div>
-            <div class="sidebar" :class="[{'is-hidden': sidebar}]">
+            <div class="sidebar" :class="[{'active': sidebar}]">
                 %(Sidebar)
             </div>
             
-            <div id="documentation" class="documentation">
+            <div id="documentation" :class="{'shrink': sidebar}">
                 %(Content)
             </div>
         </div>
