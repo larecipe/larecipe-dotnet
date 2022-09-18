@@ -61,7 +61,11 @@ builder.Services.AddLaRecipe()
 
 ...
 var app = builder.Build();
-app.UseLaRecipe()
+if (app.Environment.IsDevelopment())
+{
+    ...
+    app.UseLaRecipe() // <- Used in development only, but feel free to use it in other/all environments.
+}
 ```
 
 
