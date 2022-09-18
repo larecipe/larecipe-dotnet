@@ -8,6 +8,17 @@ LaRecipe helps you write clean and beautiful documentation using Markdown for yo
 
 ## Overview
 
+```mermaid 
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+    C-->A;
+    C-->F;
+    C-->G;
+```
+
 **LaRecipe** is simply  a code-driven package provides an easy way to create beautiful documentation like this for your product or application inside your Laravel app. However, the usage of LaRecipe is not limited to creating documentation only 😏. See an [example](/docs/{{version}}/example-project-tracking).
 
 ```php

@@ -63,9 +63,12 @@
     </div>
 
     <script src="./docs/app.js"></script>
-
+    <script src="https://unpkg.com/mermaid@9.1.7/dist/mermaid.min.js"></script>
+    
     <script>
       window.LaRecipe = new CreateLarecipe()
+
+      mermaid.initialize({ startOnLoad: true, logLevel: 'error', theme: 'dark' });
     </script>
     
     <script>

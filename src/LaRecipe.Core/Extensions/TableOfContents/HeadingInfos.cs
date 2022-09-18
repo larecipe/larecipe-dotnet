@@ -7,7 +7,7 @@ namespace LaRecipe.Core.Extensions.TableOfContents;
 internal class HeadingInfos : LevelList<HeadingInfos>
 {
     public static HeadingInfos FromHeading(HeadingInfo info)
-       => new HeadingInfos
+       => new()
        {
            Content = info.Content,
            Id = info.Id,

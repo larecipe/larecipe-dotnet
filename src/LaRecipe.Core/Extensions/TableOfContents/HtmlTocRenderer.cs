@@ -1,6 +1,5 @@
 using Markdig.Renderers;
 using Markdig.Renderers.Html;
-using System;
 
 namespace LaRecipe.Core.Extensions.TableOfContents;
 
