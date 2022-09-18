@@ -107,7 +107,7 @@ App Templates.
 
 ## Sponsors
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/larecipe#sponsor)]
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://github.com/sponsors/saleem-hadad)]
 
 ## JetBrains
 Thank you, JetBrains for sponsoring the license ❤️
