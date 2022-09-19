@@ -60,7 +60,7 @@ public class DocumentationMiddleware
             FileProvider = new CompositeFileProvider(
                 new EmbeddedFileProvider(typeof(DocumentationMiddleware).GetTypeInfo().Assembly, EmbeddedFileNamespace),
                 new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Documentation"))
-                ),
+                )
         };
 
         return new StaticFileMiddleware(next, hostingEnv, Options.Create(staticFileOptions), loggerFactory);

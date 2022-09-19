@@ -47,11 +47,6 @@ FinalMessageResolver | <larecipe-card><larecipe-badge type="success" circle clas
     <larecipe-progress type="success" :value="100"></larecipe-progress>
 </larecipe-card>
 
-
-## Credits
-
-LaRecipe package uses internally some open-source third-party libraries/packages, many thanks to the web community:
-
 + [Laravel](https://laravel.com) - Open source full-stack framework.
 + [VueJs](https://vuejs.org) - The Progressive JavaScript Framework.
 + [TailwindCSS](https://tailwindcss.com) - A utility-first CSS framework for rapid UI development.
@@ -59,3 +54,5 @@ LaRecipe package uses internally some open-source third-party libraries/packages
 + [symfony/dom-crawler](https://symfony.com) - Dom manipulation.
 + [phpunit/phpunit](https://phpunit.de) - PHP unit testing library.
 + [orchestra/testbench](https://github.com/orchestral/testbench) - Unit test package for Laravel packages.
+
+![image](/docs/images/funny.gif)
