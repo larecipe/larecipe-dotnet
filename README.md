@@ -94,7 +94,7 @@ Finally, run the app and visit `/docs` endpoint. Enjoy documenting.
 #### See [full documentation](https://larecipe.saleem.dev/)
 
 
-## Examples
+## Used by
 
 * [Zino](https://zino.binarytorch.com.my/1.0/installation) - 🤖 Custom Arduino library made for humans.
 * [Blogged](https://blogged.binarytorch.com.my/docs/1.0/overview) - Blogged is a package provides an easy way to create beautiful blog inside your Laravel projects.
