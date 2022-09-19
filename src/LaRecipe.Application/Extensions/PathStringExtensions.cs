@@ -12,7 +12,7 @@ public static class PathStringExtensions
         pathString.Value != null && pathString.Value.StartsWith("/docs/") && ! pathString.IsDocumentationAssets(); 
     
     public static bool IsDocumentationAssets(this PathString pathString) =>
-        pathString.Value != null && (pathString.Value.StartsWith("/docs/app.css") || pathString.Value.StartsWith("/docs/app.js"));
+        pathString.Value != null && Regex.IsMatch(pathString.Value, "^(/+\\w{0,}){0,}\\.\\w{1,}$",  RegexOptions.IgnoreCase);
 
     public static string ResolveRelativeUrl(this PathString pathString, string url) => 
         string.IsNullOrEmpty(pathString) || ! pathString.HasValue || pathString.Value.EndsWith("/")

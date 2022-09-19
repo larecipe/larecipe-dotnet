@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaRecipe.Core", "LaRecipe.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaRecipe.Application", "LaRecipe.Application\LaRecipe.Application.csproj", "{415BB820-5B3F-4BEE-8D83-56B48853357A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BFAA0814-6D4B-4175-B054-450B7A0F78EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaRecipe.Application.Tests", "..\tests\LaRecipe.Application.Tests\LaRecipe.Application.Tests.csproj", "{ED339B7A-791E-4D4C-B285-3EE88BABF92F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +36,13 @@ Global
 		{415BB820-5B3F-4BEE-8D83-56B48853357A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{415BB820-5B3F-4BEE-8D83-56B48853357A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{415BB820-5B3F-4BEE-8D83-56B48853357A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED339B7A-791E-4D4C-B285-3EE88BABF92F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED339B7A-791E-4D4C-B285-3EE88BABF92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED339B7A-791E-4D4C-B285-3EE88BABF92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED339B7A-791E-4D4C-B285-3EE88BABF92F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C84D4E5F-EA12-4BD3-97BB-4985E3257FB1} = {8BBE1A54-2F47-4F52-B2B6-77E4B230A481}
+		{ED339B7A-791E-4D4C-B285-3EE88BABF92F} = {BFAA0814-6D4B-4175-B054-450B7A0F78EF}
 	EndGlobalSection
 EndGlobal
