@@ -38,10 +38,10 @@
 
 ```bash
 # Package manager
-Install-Package LaRecipe -Version 0.0.12-alpha
+Install-Package LaRecipe -Version 0.0.14-alpha
 
 # CLI
-dotnet add package LaRecipe --version 0.0.12-alpha
+dotnet add package LaRecipe --version 0.0.14-alpha
 ```
 
 2. Register LaRecipe as a service and use the middleware
