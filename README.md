@@ -51,7 +51,6 @@ This middleware will be used only when the request path starts with `/docs`, thi
 > Minimal API
 
 ```
-using LaRecipe;
 using LaRecipe.Extensions;
 
 ..
