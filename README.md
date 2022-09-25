@@ -25,7 +25,7 @@
 
 **LaRecipe** is simply a code-driven package provides an easy way to create beautiful documentation for your product or application inside your **.Net** apps.
 
-> Note: LaRecipe was originally built to work with Laravel framework and now we're expanding the scope to integrate it with dotnet applications. Check out the Laravel integration version.
+Note: LaRecipe was originally built to work with Laravel framework and now we're expanding the scope to integrate it with dotnet core applications. Check out the [Laravel integration version](https://github.com/saleem-hadad/larecipe)
 
 ![LaRecipe Screenshot](https://larecipe.saleem.dev/images/screenshot.png#)
 
@@ -34,7 +34,7 @@
 
 1. Install the standard Nuget package into your ASP.NET Core application.
 
-> LaRecipe for dotnet is still in a very early stage (alpha), use it carefully with production.
+> LaRecipe for dotnet is still in a very early stage (alpha), use it carefully in production.
 
 ```bash
 # Package manager
@@ -56,21 +56,31 @@ using LaRecipe.Extensions;
 ..
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddLaRecipe()
+builder.Services.AddLaRecipe() // <- add LaRecipe
 
 ...
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     ...
-    app.UseLaRecipe() // <- Used in development only, but feel free to use it in other/all environments.
+    app.UseLaRecipe() // <- Use in development only, but feel free to use it in other/all environments.
 }
 ```
 
 
-3. Add your markdown documentation (manually for now), create a directory in the root of your application called `Documentation` and then add the following required files to start with:
+3. Add the markdown documentation files, you can use the LaRecipe CLI to help you with that or you can create them manually if you like:
 
 > Check the [provided example](https://github.com/larecipe/larecipe-dotnet/tree/main/tests/LaRecipe.Example/Documentation) for more information
+
+
+```
+# run these commands in the root of your application
+dotnet new tool-manifest # if you are setting up this repo
+dotnet tool install --local LaRecipe.Cli --version 0.0.2-alpha
+dotnet larecipe install
+```
+
+The above CLI command will generate the initial docs files as follow:
 
 ```
 .(root)
@@ -79,7 +89,7 @@ if (app.Environment.IsDevelopment())
 │  └─ overview.md
 ```
 
-4. (Optional) If you're using docker image to build and deploy your application, make sure to include the documentation files in the published image. Add this configuration to your application `xxx.csproj` 
+4. If you're using docker image to build and deploy your application, make sure to include the documentation files in the published image. Add this configuration to your application `xxx.csproj` 
 
 ```
 <ItemGroup>
