@@ -23,6 +23,8 @@
     <ItemGroup>
         <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
         <PackageReference Include="System.CommandLine.NamingConventionBinder" Version="2.0.0-beta4.22272.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -31,5 +33,5 @@
         <PackagePath></PackagePath>
       </None>
     </ItemGroup>
-
+    
 </Project>
