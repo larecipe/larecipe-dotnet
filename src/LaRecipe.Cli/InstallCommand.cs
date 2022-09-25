@@ -11,7 +11,7 @@ public static class InstallCommand
         
         command.Handler = CommandHandler.Create<InitCommandArguments>(args =>
         {
-            Console.WriteLine("Created Documentation Files.");
+            Console.WriteLine("Created documentation files.");
         });
 
         return command;

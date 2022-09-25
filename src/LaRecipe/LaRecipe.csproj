@@ -26,7 +26,6 @@
     
     <ItemGroup>
       <ProjectReference Include="..\LaRecipe.Application\LaRecipe.Application.csproj" />
-      <ProjectReference Include="..\LaRecipe.Cli\LaRecipe.Cli.csproj" />
       <ProjectReference Include="..\LaRecipe.Core\LaRecipe.Core.csproj" />
     </ItemGroup>
 </Project>
