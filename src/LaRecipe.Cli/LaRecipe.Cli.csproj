@@ -5,10 +5,10 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <OutputType>Exe</OutputType>
         <ToolCommandName>larecipe</ToolCommandName>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>LaRecipe CLI</Title>
+        <PackAsTool>true</PackAsTool>
         <Description>LaRecipe CLI</Description>
         <Copyright>Copyright (c) LaRecipe 2022</Copyright>
         <PackageProjectUrl>https://larecipe.saleem.dev/</PackageProjectUrl>
@@ -17,7 +17,7 @@
         <RepositoryUrl>https://github.com/larecipe/larecipe-dotnet</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>larecipe-cli</PackageTags>
-        <PackageVersion>0.0.1-alpha</PackageVersion>
+        <PackageVersion>0.0.2-alpha</PackageVersion>
         <OutputPath>../out</OutputPath>
     </PropertyGroup>
 
