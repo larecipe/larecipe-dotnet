@@ -15,6 +15,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageTags>docs, documentation, larecipe</PackageTags>
         <PackageVersion>0.0.15-alpha</PackageVersion>
+        <OutputPath>../out</OutputPath>
     </PropertyGroup>
 
     <ItemGroup>
