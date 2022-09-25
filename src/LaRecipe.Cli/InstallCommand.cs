@@ -5,18 +5,15 @@ namespace LaRecipe.Cli;
 
 public static class InstallCommand
 {
-    public static Command Create()
-    {
-        var command = new Command("install", "Create initial documentation files.");
-        
-        command.Handler = CommandHandler.Create<InitCommandArguments>(args =>
+    public static Command Create() =>
+        new ("install", "Create initial documentation files.")
         {
-            Console.WriteLine("Created documentation files.");
-        });
+            Handler = CommandHandler.Create<InitCommandArguments>(_ =>
+            {
+                Console.WriteLine("Created documentation files.");
+            })
+        };
 
-        return command;
-    }
-    
     private class InitCommandArguments
     {
     }

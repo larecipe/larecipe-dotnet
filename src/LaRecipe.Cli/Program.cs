@@ -3,10 +3,7 @@ using System.CommandLine.Builder;
 using System.CommandLine.Parsing;
 using LaRecipe.Cli;
 
-var command = new RootCommand
-{
-    Description = "LaRecipe Commands",
-};
+var command = new RootCommand { Description = "LaRecipe Commands" };
 
 command.AddCommand(InstallCommand.Create());
 
