@@ -1,31 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <OutputType>Exe</OutputType>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+        <ToolCommandName>larecipe</ToolCommandName>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Title>LaRecipe.Application</Title>
-        <Description>UI Middleware for main LaRecipe package.</Description>
+        <Title>LaRecipe CLI</Title>
+        <Description>LaRecipe CLI</Description>
         <Copyright>Copyright (c) LaRecipe 2022</Copyright>
         <PackageProjectUrl>https://larecipe.saleem.dev/</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>icon.png</PackageIcon>
         <RepositoryUrl>https://github.com/larecipe/larecipe-dotnet</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageTags>docs, documentation, larecipe</PackageTags>
+        <PackageTags>larecipe-cli</PackageTags>
         <PackageVersion>0.0.15-alpha</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <EmbeddedResource Include="../LaRecipe\Web\index.html" />
-        <EmbeddedResource Include="../LaRecipe\Web\app.css" />
-        <EmbeddedResource Include="../LaRecipe\Web\app.js" />
+        <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+        <PackageReference Include="System.CommandLine.NamingConventionBinder" Version="2.0.0-beta4.22272.1" />
     </ItemGroup>
 
     <ItemGroup>
@@ -34,4 +31,5 @@
         <PackagePath></PackagePath>
       </None>
     </ItemGroup>
+
 </Project>

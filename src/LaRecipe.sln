@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BFAA0814
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaRecipe.Application.Tests", "..\tests\LaRecipe.Application.Tests\LaRecipe.Application.Tests.csproj", "{ED339B7A-791E-4D4C-B285-3EE88BABF92F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaRecipe.Cli", "LaRecipe.Cli\LaRecipe.Cli.csproj", "{4C67D589-93D5-4D39-8075-3168C52F74D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{ED339B7A-791E-4D4C-B285-3EE88BABF92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED339B7A-791E-4D4C-B285-3EE88BABF92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED339B7A-791E-4D4C-B285-3EE88BABF92F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C67D589-93D5-4D39-8075-3168C52F74D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C67D589-93D5-4D39-8075-3168C52F74D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C67D589-93D5-4D39-8075-3168C52F74D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C67D589-93D5-4D39-8075-3168C52F74D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C84D4E5F-EA12-4BD3-97BB-4985E3257FB1} = {8BBE1A54-2F47-4F52-B2B6-77E4B230A481}
