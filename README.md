@@ -56,14 +56,14 @@ using LaRecipe.Extensions;
 ..
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddLaRecipe() // <- add LaRecipe
+builder.Services.AddLaRecipe(); // <- add LaRecipe
 
 ...
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     ...
-    app.UseLaRecipe() // <- Use in development only, but feel free to use it in other/all environments.
+    app.UseLaRecipe(); // <- Use in development only, but feel free to use it in other/all environments.
 }
 ```
 
