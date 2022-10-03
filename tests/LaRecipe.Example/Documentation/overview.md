@@ -1,12 +1,56 @@
-# Laravel Markdown Documentation
+# Overview
 
-LaRecipe helps you write clean and beautiful documentation using Markdown for your software projects and keeping the docs within the source code.
+Write a summary about the current page..
 
 ---
 
 [TOC]
 
+
 ## Overview
+
+Write something cool here..
+
+## Some Features
+
+### Code
+
+You have inline code `highlight` as well
+
+```csharp
+class Fact 
+{
+    public void sayTruth()
+    {
+        Console.WriteLine("LaRecipe is cool");
+    }
+}
+```
+
+### Built-in Vue component
+
+- Card
+
+<larecipe-card shadow>
+    Example card
+</larecipe-card>
+
+- Progress bar
+
+<larecipe-progress type="success" :value="60"></larecipe-progress>
+
+- Button 
+
+<larecipe-button radius="full">Example button</larecipe-button>
+
+
+<larecipe-card>
+    Progress bar inside a card
+    <larecipe-progress type="info" :value="100"></larecipe-progress>
+</larecipe-card>
+
+
+### Diagrams
 
 ```mermaid 
 graph TD;
@@ -19,40 +63,30 @@ graph TD;
     C-->G;
 ```
 
-**LaRecipe** is simply  a code-driven package provides an easy way to create beautiful documentation like this for your product or application inside your Laravel app. However, the usage of LaRecipe is not limited to creating documentation only 😏. See an [example](/docs/{{version}}/example-project-tracking).
+### Alerts
 
-```php
-echo 'LaRecipe is beautiful';
-```
+> This is a simple alert
 
-## Features
+<br/>
 
-Inline code is `cool`
+{.danger}
+> But you can make it scary
 
+<br/>
 
-```js
-echo 'LaRecipe is beautiful';
-```
-
-
-FinalMessageResolver | <larecipe-card><larecipe-badge type="success" circle class="mr-2" icon="fa fa-book">🚀</larecipe-badge> Yay! you saved AED 10 on delivery!<larecipe-progress type="success" :value="100"></larecipe-progress></larecipe-card>
-:- | :-
-0  | 1
+{.success}
+> Or nice
 
 
+### Tables
 
+| Product            | Price                        |
+|:-------------------|:-----------------------------|
+| Ice Cream          | AED 10                       |
+| Pepsi              | AED 2.5                      |
 
-<larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa fa-book"></larecipe-badge> Markdown Support
-    <larecipe-progress type="success" :value="100"></larecipe-progress>
-</larecipe-card>
+### Checkbox list
 
-+ [Laravel](https://laravel.com) - Open source full-stack framework.
-+ [VueJs](https://vuejs.org) - The Progressive JavaScript Framework.
-+ [TailwindCSS](https://tailwindcss.com) - A utility-first CSS framework for rapid UI development.
-+ [erusev/parsedown-extra](https://github.com/erusev/parsedown-extra) - PHP markdown parser.
-+ [symfony/dom-crawler](https://symfony.com) - Dom manipulation.
-+ [phpunit/phpunit](https://phpunit.de) - PHP unit testing library.
-+ [orchestra/testbench](https://github.com/orchestral/testbench) - Unit test package for Laravel packages.
-
-![image](/docs/images/funny.gif)
+- [x] This is done
+- [ ] Todo
+- [ ] Todo
