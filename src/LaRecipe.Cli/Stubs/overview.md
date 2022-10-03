@@ -1,37 +1,92 @@
 # Overview
 
-Write here a nice summary about the current page..
+Write a summary about the current page..
 
 ---
 
 [TOC]
 
-## Get Started
 
+## Overview
 
-This is a nice empty meaningless sentence.
+Write something cool here..
 
+## Some Features
 
-```php
-echo 'LaRecipe is beautiful';
+### Code
+
+You have inline code `highlight` as well
+
+```csharp
+class Fact 
+{
+    public void sayTruth()
+    {
+        Console.WriteLine("LaRecipe is cool");
+    }
+}
 ```
 
-## Features
+### Built-in Vue component
 
-Inline code is `cool`
+- Card
 
+<larecipe-card shadow>
+    Example card
+</larecipe-card>
 
-```js
-echo 'LaRecipe is beautiful';
-```
+- Progress bar
 
+<larecipe-progress type="success" :value="60"></larecipe-progress>
 
-FinalMessageResolver | <larecipe-card><larecipe-badge type="success" circle class="mr-2" icon="fa fa-book">🚀</larecipe-badge> Yay! you saved AED 10 on delivery!<larecipe-progress type="success" :value="100"></larecipe-progress></larecipe-card>
-:- | :-
-0  | 1
+- Button 
+
+<larecipe-button radius="full">Example button</larecipe-button>
 
 
 <larecipe-card>
-    <larecipe-badge type="success" circle class="mr-2" icon="fa fa-book"></larecipe-badge> Markdown Support
-    <larecipe-progress type="success" :value="100"></larecipe-progress>
+    Progress bar inside a card
+    <larecipe-progress type="info" :value="100"></larecipe-progress>
 </larecipe-card>
+
+
+### Diagrams
+
+```mermaid 
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+    C-->A;
+    C-->F;
+    C-->G;
+```
+
+### Alerts
+
+> This is a simple alert
+
+<br/>
+
+{.danger}
+> But you can make it scary
+
+<br/>
+
+{.success}
+> Or nice
+
+
+### Tables
+
+| Product            | Price                        |
+|:-------------------|:-----------------------------|
+| Ice Cream          | AED 10                       |
+| Pepsi              | AED 2.5                      |
+
+### Checkbox list
+
+- [x] This is done
+- [ ] Todo
+- [ ] Todo
