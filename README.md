@@ -76,7 +76,7 @@ if (app.Environment.IsDevelopment())
 ```
 # run these commands in the root of your application
 dotnet new tool-manifest # if you are setting up this repo
-dotnet tool install --local LaRecipe.Cli --version 0.0.3-alpha
+dotnet tool install --local LaRecipe.Cli --version 0.0.4-alpha
 dotnet larecipe install
 ```
 
