@@ -2,15 +2,14 @@
     <img src="https://larecipe.saleem.dev/images/logo.svg"/>
 </h6>
 
-<h2 align="center">
+<h1 align="center">
     LaRecipe (very early stage) | .Net ❤️
-</h2>
+</h1>
 
 
 <h6 align="center">
-    Write gorgeous documentations for your products using Markdown inside your dotnet apps.
+    Write and ship beautiful documentation with your dotnet projects using MarkDown
 </h6>
-    
 
 <p align="center">
 <a href="https://github.com/larecipe/larecipe-dotnet"><img src="https://img.shields.io/packagist/dt/binarytorch/larecipe.svg" alt="License"></a>
@@ -21,11 +20,9 @@
 </p>
 <br/><br/>
 
-# LaRecipe 🍪
+**LaRecipe** is simply a code-driven package that provides an easy way to create beautiful documentation for your product or application inside your **.Net** apps.
 
-**LaRecipe** is simply a code-driven package provides an easy way to create beautiful documentation for your product or application inside your **.Net** apps.
-
-Note: LaRecipe was originally built to work with Laravel framework and now we're expanding the scope to integrate it with dotnet core applications. Check out the [Laravel integration version](https://github.com/saleem-hadad/larecipe)
+> Note: LaRecipe was originally built to work with Laravel framework and now we're expanding the scope to integrate it with dotnet core applications. Check out the [Laravel integration version](https://github.com/saleem-hadad/larecipe)
 
 ![LaRecipe Screenshot](https://larecipe.saleem.dev/images/screenshot.png#)
 
